@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的个人博客</title>
+    <style>
+        /* 全局样式 */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f8ff; /* 爱丽丝蓝，非常淡的背景色 */
+            color: #333;
+        }
+
+        /* 顶部导航栏 */
+        header {
+            background-color: #87cefa; /* 淡蓝色天空 */
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            color: #fff;
+            font-size: 2.5em;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+        }
+
+        header p {
+            color: #e6f7ff;
+            margin-top: 10px;
+            font-size: 1.1em;
+        }
+
+        /* 导航菜单 */
+        nav {
+            background-color: #b3e5fc;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #0277bd;
+            margin: 0 15px;
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #fff;
+        }
+
+        /* 主要内容区域 */
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .intro {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #546e7a;
+        }
+
+        /* 卡通形象画廊 (Grid布局) */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        /* 卡片样式 */
+        .card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(135, 206, 250, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+            padding: 20px;
+            border: 2px solid #e1f5fe;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(135, 206, 250, 0.5);
+            border-color: #81d4fa;
+        }
+
+        .card img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background-color: #e1f5fe;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            color: #039be5;
+            margin: 10px 0;
+        }
+
+        .card p {
+            color: #666;
+            font-size: 0.9em;
+            line-height: 1.5;
+        }
+
+        /* 按钮样式 */
+        .btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 8px 20px;
+            background-color: #4fc3f7;
+            color: white;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 0.9em;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #29b6f6;
+        }
+
+        /* 底部版权 */
+        footer {
+            margin-top: 60px;
+            background-color: #e1f5fe;
+            padding: 20px;
+            text-align: center;
+            color: #81d4fa;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 头部 -->
+    <header>
+        <h1>我的个人博客</h1>
+        <p>记录生活，分享快乐，保持童心 ✨</p>
+    </header>
+
+    <!-- 导航栏 -->
+    <nav>
+        <a href="#">首页</a>
+        <a href="#">关于我</a>
+        <a href="#">日常随笔</a>
+        <a href="#">联系方式</a>
+    </nav>
+
+    <!-- 主体内容 -->
+    <div class="container">
+        <div class="intro">
+            <h2>欢迎来到我的淡蓝色小世界 ☁️</h2>
+            <p>这里住着各种各样的卡通朋友，代表着我不同的心情和故事。</p>
+        </div>
+
+        <!-- 卡通展示区 -->
+        <div class="gallery">
+            <!-- 卡片 1 -->
+            <div class="card">
+                <!-- 使用DiceBear API生成卡通头像 -->
+                <img src="https://api.dicebear.com/9.x/adventurer/svg?seed=Felix" alt="卡通形象1">
+                <h3>冒险家小蓝</h3>
+                <p>喜欢探索未知的世界，背包里永远装着好奇心。</p>
+                <a href="#" class="btn">查看故事</a>
+            </div>
+
+            <!-- 卡片 2 -->
+            <div class="card">
+                <img src="https://api.dicebear.com/9.x/adventurer/svg?seed=Annie" alt="卡通形象2">
+                <h3>快乐安妮</h3>
+                <p>记录生活中的每一个小确幸，笑点很低。</p>
+                <a href="#" class="btn">查看日记</a>
+            </div>
+
+            <!-- 卡片 3 -->
+            <div class="card">
+                <img src="https://api.dicebear.com/9.x/adventurer/svg?seed=Rocky" alt="卡通形象3">
+                <h3>极客洛基</h3>
+                <p>喜欢研究代码和新奇的科技产品，偶尔发呆。</p>
+                <a href="#" class="btn">技术文章</a>
+            </div>
+
+            <!-- 卡片 4 -->
+            <div class="card">
+                <img src="https://api.dicebear.com/9.x/adventurer/svg?seed=Zoey" alt="卡通形象4">
+                <h3>艺术家佐伊</h3>
+                <p>用画笔描绘梦境，喜欢淡蓝色的天空。</p>
+                <a href="#" class="btn">画廊展示</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 底部 -->
+    <footer>
+        <p>&copy; 2023 我的个人博客. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

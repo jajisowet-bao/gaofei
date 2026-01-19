@@ -76,40 +76,15 @@
         }
 
         /* 卡片样式 */
-        .card {
-            background: white;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(135, 206, 250, 0.3);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            text-align: center;
-            padding: 20px;
-            border: 2px solid #e1f5fe;
-        }
-
-        .card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 25px rgba(135, 206, 250, 0.5);
-            border-color: #81d4fa;
-        }
-
-        .card img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
+       .card img {
+            width: 150px;       /* 必须设置固定宽度 */
+            height: 150px;      /* 必须设置和宽度一样的高度 */
+            border-radius: 50%; /* 50% 就是正圆形 */
+            object-fit: cover;  /* 保证图片不被拉伸变形 */
             background-color: #e1f5fe;
             margin-bottom: 15px;
+            border: 3px solid #b3e5fc; /* 加个淡蓝色的边框更好看 */
         }
-
-        .card h3 {
-            color: #039be5;
-            margin: 10px 0;
-        }
-
-        .card p {
-            color: #666;
-            font-size: 0.9em;
-            line-height: 1.5;
         }
 
         /* 按钮样式 */
@@ -166,38 +141,36 @@
         <div class="gallery">
             <!-- 卡片 1 -->
             <div class="card">
-                <!-- 使用DiceBear API生成卡通头像 -->
-                <img src="https://api.dicebear.com/9.x/adventurer/svg?seed=Felix" alt="卡通形象1">
-                <h3>冒险家小蓝</h3>
-                <p>喜欢探索未知的世界，背包里永远装着好奇心。</p>
-                <a href="#" class="btn">查看故事</a>
+                <img src="cartoon1.jpg" alt="日常穿搭">
+                <h3>元气日常</h3>
+                <p>今天穿了喜欢的蓝色外套，天气晴朗，心情也是蓝色的清澈。</p>
+                <a href="#" class="btn">查看穿搭</a>
             </div>
 
             <!-- 卡片 2 -->
             <div class="card">
-                <img src="https://api.dicebear.com/9.x/adventurer/svg?seed=Annie" alt="卡通形象2">
-                <h3>快乐安妮</h3>
-                <p>记录生活中的每一个小确幸，笑点很低。</p>
-                <a href="#" class="btn">查看日记</a>
+                <img src="cartoon2.jpg" alt="快乐自拍">
+                <h3>开心时刻</h3>
+                <p>Hello Kitty 发卡是今天的亮点！比个耶，记录此刻的快乐。</p>
+                <a href="#" class="btn">更多自拍</a>
             </div>
 
             <!-- 卡片 3 -->
             <div class="card">
-                <img src="https://api.dicebear.com/9.x/adventurer/svg?seed=Rocky" alt="卡通形象3">
-                <h3>极客洛基</h3>
-                <p>喜欢研究代码和新奇的科技产品，偶尔发呆。</p>
-                <a href="#" class="btn">技术文章</a>
+                <img src="cartoon3.jpg" alt="艺术创作">
+                <h3>绘梦画廊</h3>
+                <p>拿起画笔的时候，世界就变成了彩色的云朵和星空。</p>
+                <a href="#" class="btn">查看画作</a>
             </div>
 
             <!-- 卡片 4 -->
             <div class="card">
-                <img src="https://api.dicebear.com/9.x/adventurer/svg?seed=Zoey" alt="卡通形象4">
-                <h3>艺术家佐伊</h3>
-                <p>用画笔描绘梦境，喜欢淡蓝色的天空。</p>
-                <a href="#" class="btn">画廊展示</a>
+                <img src="cartoon4.jpg" alt="静心阅读">
+                <h3>静谧时光</h3>
+                <p>在书桌前写写画画，沉浸在知识的海洋里，享受独处的宁静。</p>
+                <a href="#" class="btn">阅读书单</a>
             </div>
         </div>
-    </div>
 
     <!-- 底部 -->
     <footer>

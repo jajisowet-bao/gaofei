@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的相册详情</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f0f8ff; /* 保持淡蓝色背景 */
+            text-align: center;
+        }
+        
+        /* 顶部返回按钮 */
+        .back-btn {
+            display: inline-block;
+            margin-bottom: 20px;
+            padding: 10px 20px;
+            background-color: #87cefa;
+            color: white;
+            text-decoration: none;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+        .back-btn:hover { background-color: #039be5; }
+
+        h1 { color: #546e7a; margin-bottom: 30px; }
+
+        /* 照片墙布局 */
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        /* 照片样式 */
+        .photo-item {
+            background: white;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .photo-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            display: block;
+        }
+        
+        .photo-item p { color: #666; font-size: 0.9em; margin-top: 10px; }
+    </style>
+</head>
+<body>
+
+    <!-- 返回首页按钮 -->
+    <a href="index.html" class="back-btn">← 返回首页</a>
+
+    <!-- 这里改标题 -->
+    <h1>✨ 元气日常穿搭 ✨</h1>
+
+    <div class="photo-grid">
+        
+        <!-- 照片 1 -->
+        <div class="photo-item">
+            <!--把下面的 d1.jpg 换成你自己的照片文件名 -->
+            <img src="d1.jpg" alt="照片描述">
+            <p>这是第一张照片的描述</p>
+        </div>
+
+        <!-- 照片 2 -->
+        <div class="photo-item">
+            <img src="d2.jpg" alt="照片描述">
+            <p>这是第二张照片的描述</p>
+        </div>
+
+        <!-- 如果想加更多照片，就复制上面这一块 div -->
+        <div class="photo-item">
+            <img src="d3.jpg" alt="照片描述">
+            <p>这是第三张照片的描述</p>
+        </div>
+
+    </div>
+
+</body>
+</html>

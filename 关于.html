@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关于我 - 我的个人博客</title>
+    <!-- 这里复用了主页的样式，保持风格一致 -->
+    <style>
+        body { margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; background-color: #f0f8ff; color: #333; }
+        header { background-color: #87cefa; padding: 20px 0; text-align: center; color: white; }
+        header h1 { margin: 0; }
+        
+        /* 导航栏样式 */
+        nav { background-color: #b3e5fc; padding: 10px; text-align: center; }
+        nav a { text-decoration: none; color: #0277bd; margin: 0 15px; font-weight: bold; }
+        nav a:hover { color: white; }
+
+        /* 文字内容区域 */
+        .content-box {
+            max-width: 800px;
+            margin: 40px auto;
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 5px 15px rgba(135, 206, 250, 0.3);
+            line-height: 1.8; /* 让文字行距舒服一点 */
+        }
+        h2 { color: #039be5; border-bottom: 2px solid #e1f5fe; padding-bottom: 10px; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>关于我</h1>
+    </header>
+
+    <!-- 导航栏 (注意：这里都要能点回去) -->
+    <nav>
+        <a href="index.html">首页</a>
+        <a href="about.html" style="color:white;">关于我</a> <!-- 当前页面高亮 -->
+        <a href="blog.html">日常随笔</a>
+        <a href="contact.html">联系方式</a>
+    </nav>
+
+    <div class="content-box">
+        <h2>👋 哈喽，我是 LeLe！</h2>
+        <p>这里是我的个人小站。我是一个热爱生活、喜欢记录的女孩。</p>
+        <p>（你可以在这里写上你的星座、爱好、MBTI、或者是你建立这个网站的初衷...）</p>
+        
+        <br>
+        <h2>🌟 我的爱好</h2>
+        <p>🎨 画画：喜欢用色彩表达心情。</p>
+        <p>📸 拍照：记录每一个美好的瞬间。</p>
+        <p>🐶 撸狗：家里有一只超可爱的雪纳瑞！</p>
+    </div>
+
+</body>
+</html>

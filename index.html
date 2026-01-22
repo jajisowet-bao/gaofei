@@ -176,6 +176,141 @@
     <footer>
         <p>&copy; 2026 我的赛博小世界. All Rights Reserved.</p>
     </footer>
+<!-- ================= 弹窗代码开始 ================= -->
+<style>
+    /* 1. 弹窗背景遮罩 (黑透色) */
+    .modal-overlay {
+        display: none; /* 默认隐藏，JS控制显示 */
+        position: fixed;
+        z-index: 999; /* 保证在最上层 */
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.5); /* 半透明黑色 */
+        backdrop-filter: blur(3px); /* 背景稍微模糊一点，更有高级感 */
+    }
 
+    /* 2. 弹窗盒子 (信纸) */
+    .modal-content {
+        background-color: #ffffff;
+        margin: 10% auto; /* 距离顶部10%，水平居中 */
+        padding: 40px;
+        border: 4px solid #b3e5fc; /* 淡蓝色边框 */
+        width: 80%;
+        max-width: 600px; /* 最大宽度 */
+        border-radius: 20px;
+        position: relative;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        animation: slideDown 0.5s ease; /* 下落动画 */
+    }
+
+    /* 3. 右上角关闭按钮 (X) */
+    .close-btn {
+        color: #aaa;
+        position: absolute;
+        top: 15px;
+        right: 25px;
+        font-size: 30px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: color 0.3s;
+    }
+    .close-btn:hover {
+        color: #ff6b6b; /* 鼠标放上去变红 */
+    }
+
+    /* 4. 页面上的悬浮按钮 (信封图标) */
+    .open-letter-btn {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        background-color: #87cefa;
+        color: white;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 60px;
+        font-size: 30px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        cursor: pointer;
+        transition: transform 0.3s;
+        z-index: 998;
+    }
+    .open-letter-btn:hover {
+        transform: scale(1.1) rotate(10deg); /* 鼠标放上去稍微放大摇晃 */
+        background-color: #039be5;
+    }
+
+    /* 弹窗动画 */
+    @keyframes slideDown {
+        from {top: -100px; opacity: 0;}
+        to {top: 0; opacity: 1;}
+    }
+
+    /* 信件文字样式 */
+    .letter-body {
+        font-family: 'Georgia', serif; /* 衬线字体更有信纸的感觉 */
+        color: #555;
+        line-height: 1.8;
+    }
+    .letter-title {
+        color: #87cefa;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+</style>
+
+<!-- 悬浮在右下角的按钮 -->
+<div class="open-letter-btn" onclick="openModal()" title="读信">💌</div>
+
+<!-- 弹窗本体 -->
+<div id="myModal" class="modal-overlay">
+    <div class="modal-content">
+        <!-- 关闭按钮 -->
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        
+        <!-- 信的内容 (在这里修改文字) -->
+        <h2 class="letter-title">致每一位访客 ☁️</h2>
+        <div class="letter-body">
+            <p>你好呀！很高兴你发现了这个小角落。</p>
+            <p>这里没有喧嚣和嘈杂，只有我收集的淡蓝色心情和生活碎片。</p>
+            <p>希望你能在浏览这些照片和文字的时候，感受到一丝轻松和治愈。</p>
+            <p>祝你今天也拥有好心情！</p>
+            <br>
+            <p style="text-align: right;">—— LeLe 敬上</p>
+        </div>
+    </div>
+</div>
+
+<script>
+    // 获取元素
+    var modal = document.getElementById("myModal");
+
+    // 1. 页面加载完成时，自动打开弹窗
+    window.onload = function() {
+        // 如果你想让用户每次刷新都看到，保留下面这行：
+        modal.style.display = "block"; 
+    }
+
+    // 2. 打开弹窗的函数
+    function openModal() {
+        modal.style.display = "block";
+    }
+
+    // 3. 关闭弹窗的函数
+    function closeModal() {
+        modal.style.display = "none";
+    }
+
+    // 4. 点击弹窗外部空白处也能关闭
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
+<!-- ================= 弹窗代码结束 ================= -->
 </body>
 </html>
